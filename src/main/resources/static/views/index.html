@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Sacumen Machine Test</title>
+</head>
+<body ng-app="sacumenMachineTestApp">
+<div class="container no-mrgn no-padding sec-width-100" ng-controller="SacumenMachineTestControllers">
+<div class="header" ><h1>Sacumen Machine Test App</h1></div>
+    <div class="row row-div-wd" >
+    <div class="sacumen-scrollbar-issue-div">
+  <table class="table table-bordered table-hover">
+		<tbody ng-repeat="item in data">
+			<tr>
+				<td  colspan="2" class="filename-header-bck-color"><b>File Name : </b><span ng-bind="item.fileName"></span></td>
+			</tr>
+			<tr>
+				<td>
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>S.No.</th>
+								<th>Issue Id</th>
+							</tr>
+						</thead>
+					
+						<tbody> 
+							<tr ng-repeat="issueId in item.issueIds" ng-class="rollClass" ng-mouseenter="rollClass = 'highlight'" ng-mouseleave="rollClass = ''">
+								<td ng-bind="$index+1"></td>
+								<td ng-bind="issueId"></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+  </div>
+    </div>
+    <div class="footer" ><h4>Total Files : <span ng-bind="data.length"></span></h4></div>
+</div>
+</body>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/SacumenController.js"></script>
+<script src="js/app/SacumenService.js"></script>
+<link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/app/app.css"/>
+</html>

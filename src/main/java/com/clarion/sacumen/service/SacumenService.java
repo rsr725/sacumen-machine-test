@@ -36,6 +36,21 @@ public class SacumenService {
 		return fileIssueIdList;
 	}
 	
+	public List<Map<String, Object>> getFileIssueIdListV2() throws IOException, JSONException {
+		List<Map<String, Object>> resultList = new ArrayList<>();
+		Set<String> fileNames = getFileNames();
+		Map<String, Object> fileIssueIdList;
+		
+		for(String fileName: fileNames) {
+			fileIssueIdList = new HashMap<>();
+			fileIssueIdList.put("fileName",fileName);
+			fileIssueIdList.put("issueIds", getIdFromFileUrl(fileName));
+			resultList.add(fileIssueIdList);
+		}
+		
+		return resultList;
+	}
+	
 	public Set<String> getFileNames() throws JSONException, IOException {
 		JSONObject main;
 		JSONArray entries = null;

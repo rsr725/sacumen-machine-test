@@ -1,0 +1,41 @@
+body{
+    background-color: #efefef;
+}
+
+.sacumen-scrollbar-issue-div {
+	width: 100%; margin-left: 15px; height: 499px; overflow-y: auto;
+}
+
+.row-div-wd{
+	width: 99.8%;
+}
+.no-mrgn {
+	margin: 0px;
+}
+.no-padding {
+	padding: 0px;
+}
+.sec-width-100{width: 100%;}
+	
+.header {
+  overflow: hidden;
+  background: cadetblue;
+  width: 100%;
+  padding: 10px;
+  padding-top: 0px;
+}
+
+.footer {
+  overflow: hidden;
+  background: cadetblue;
+  width: 100%;
+  padding: 4px;
+}
+
+.highlight {
+    background-color: bisque;
+}
+
+.filename-header-bck-color{
+	background-color: aliceblue;
+}
